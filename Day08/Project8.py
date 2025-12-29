@@ -18,7 +18,7 @@ def encrypt(message,shifts):
 
 encrypt(message,shift)
 
-again=input("Type 'yes' if you want to decrypt the message.\n")
+decryption=input("Type 'yes' if you want to decrypt the message.\n")
 message=input("Type your message: \n").lower()
 shift=int(input("Enter the shift number: \n"))
 
