@@ -1,4 +1,15 @@
 # Project 12
+print('''╔══════════════════════════════════════════╗
+║          NUMBER GUESSING GAME            ║
+╠══════════════════════════════════════════╣
+║                                          ║
+║                                          ║
+║        Can you guess it right?           ║
+║                                          ║
+║        Easy Mode  : 10 Attempts          ║
+║        Hard Mode  : 5 Attempts           ║
+╚══════════════════════════════════════════╝
+''')
 print("Welcome to the Number Guessing Game!")
 print("I am thinking of a number between 1 and 100")
 import random
