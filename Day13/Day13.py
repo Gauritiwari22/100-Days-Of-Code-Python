@@ -9,9 +9,9 @@ my_function()
 
 # here is the above program, on checking closely we see that nothing gets printed on calling the function
 # because when we use the for loop to iterate over the range of numbers, it never reaches 20, because
-# range(1,20) means numbers from 1 to 10 i.e 20 is excluded hence i never equals 20. Hence, nothing gets printed
+# range(1,20) means numbers from 1 to 19 i.e 20 is excluded hence i never equals 20. Hence, nothing gets printed
 
-"Coorected version"
+"Corrected version"
 def my_function():
     for i in range(1,21): # range of numbers from 1 to 20
         if i==20:
