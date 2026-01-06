@@ -84,8 +84,134 @@ Student1.display_details()
 Student2.display_details()
 
 
+
+class QuizQuestion:
+
+    def __init__(self,question,correct_answer):
+        self.question=question
+        self.correct_answer=correct_answer
+
+    def check_answer(self,user_answer):
+        if self.correct_answer==user_answer:
+            print("Correct!")
+            return True
+        else:
+            print("Wrong!")
+            return False
+class Quiz:
+    def __init__(self):
+        self.score=0
+    def update_score(self,result):
+        if result==True:
+            self.score+=1
+    def show_score(self):
+        print(f"Your score is {self.score}")
+
+            
+
+quiz=Quiz()
+
+
+question_1=QuizQuestion("Python language has a very readable and beginner-friendly syntax.(True/False): ","true")
+question_2=QuizQuestion("Python is named after the snake Python.(True/False): ","false")
+
+
+print(question_1.question)
+result=question_1.check_answer(input("Enter answer: "))
+quiz.update_score(result)
+quiz.show_score()
+print(question_2.question)
+result=question_2.check_answer(input("Enter answer: "))
+quiz.update_score(result)
+quiz.show_score()
+
+
+
+class Counter:
+    def __init__(self):
+        self.count=0
+    def increment(self):
+        self.count+=1
+    def decrement(self):
+        self.count-=1
+        if self.count<0:
+            self.count=0
+    def show_count(self):
+        print(f"Current count: {self.count}")
+
+count=Counter()
+count.increment()
+count.decrement()
+count.decrement()
+count.decrement()
+count.show_count()
+
+
+class User:
+    
+    def __init__(self,username,password):
+        self.username=username
+        self.password=password
+    def login(self,input_username,input_password):
+        if self.username==input_username and self.password==input_password:
+            print("Login successful!")
+        else:
+            print("Invalid credentials.")
+
+user1 = User("alex123", "KHF123bgh")
+user2 = User("sonia45", "pass@123")
+
+user1.login(input("Enter username: "),input("Enter password: "))
+user2.login(input("Enter username: "),input("Enter password: "))
         
+
+
+class Product:
+    
+    def __init__(self,name,price):
+        self.name=name
+        self.price=price
+    def compare_price(self,other_product):
+        if self.price>other_product.price:
+            print(f"{other_product.name} are cheaper than {self.name}.")
+        elif self.price<other_product.price:
+            print(f"{self.name} are cheaper than {other_product.name}.")
+        else:
+            print(f"{self.name} and {other_product.name} are equal in cost.")
         
+product_1=Product("Onions",45)
+product_2=Product("Tomatoes",99)
+product_1.compare_price(product_2)
+
+
+
+class Result:
+
+    def __init__(self,name,marks_list):
+        self.name=name
+        self.marks_list=marks_list
+
+    def calculate_average(self):
+        summation=sum(self.marks_list)
+        average=summation/len(self.marks_list)
+        return average
+
+    def check_pass_fail(self):
+        average=self.calculate_average()
+        if average>=40:
+            print("Pass")
+        else:
+            print("Fail")
+
+student_1=Result("Aanya",[56,73,92,91,28])
+student_2=Result("Sumit",[63,82,16,83,14])
+
+student_1.check_pass_fail()
+student_2.check_pass_fail()
+
+
+
+
 
 
 
