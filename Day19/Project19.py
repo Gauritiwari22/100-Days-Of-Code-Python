@@ -3,6 +3,7 @@ import random
 
 screen=Screen()
 screen.setup(width=500,height=400)
+screen.bgcolor("black")
 
 user_bet=screen.textinput("Welcome to the race!","Which color do you think will win?")
 print(f"Your choice: {user_bet}")
