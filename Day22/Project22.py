@@ -26,7 +26,7 @@ screen.onkey(key="s",fun=l_paddle.downward)
 
 game_on=True
 while game_on:
-    time.sleep(0.05)
+    time.sleep(0.01)
     screen.update()
     ball.move()
 
@@ -43,12 +43,14 @@ while game_on:
             scoreboard.winner()
             game_on = False
 
-    if ball.xcor() < -380:
+    
+
+    if ball.xcor() <-380:
         ball.ball_reset()
-        scoreboard.r_point()
-        if scoreboard.r_score == 10:
-            scoreboard.winner()
-            game_on = False
+        scoreboard.r_point ()
+        if  scoreboard.r_score == 10:
+            scoreboard.winner ()
+            game_on =False
 
     
 screen.exitonclick()
