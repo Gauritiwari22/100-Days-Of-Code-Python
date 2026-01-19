@@ -36,13 +36,17 @@ while while_on:
         scoreboard.update_score()
     
     if snake.head.xcor()>290 or snake.head.ycor()>290 or snake.head.xcor()<-290 or snake.head.ycor()<-290:
-        while_on=False
-        scoreboard.game_over()
+        scoreboard.reset()
+        snake.reset()
+        
+      
     
     for segment in snake.segments[1:]:
         if snake.head.distance(segment)<10:
-            while_on=False
-            scoreboard.game_over()
+            scoreboard.reset()
+            snake.reset()
+            
+            
 
         
 
