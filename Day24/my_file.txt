@@ -1,0 +1,4 @@
+Hello, my name is Gauri.
+I love to code and build projects.
+My favourite praogramming language is Python.
+I am practicing coding for 100 days straight to brush up my coding skills.
