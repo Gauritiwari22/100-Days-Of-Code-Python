@@ -8,18 +8,34 @@ image="Day25/US states game/blank_states_img.gif"
 turtle.addshape(image)
 turtle.shape(image)
 
-user_answer=screen.textinput(title="Guess the state",prompt="Enter the state's name:")
 
-def get_onmouseclick_cor(x,y):
-    print(x,y)
+data=pd.read_csv("Day25/US states game/50_states.csv")
+all_states=data.state.to_list()
 
-turtle.onscreenclick(get_onmouseclick_cor)
+guessed_states=[]
 
-data=pd.read_csv("50_states.csv")
+while len(guessed_states)<50:
 
-if user_answer==data["state"]:
-    turtle.goto
-    turtle.write
+    user_answer=screen.textinput(title="Guess the state",prompt="Enter the state's name:").title()
+    state_cor=data[data.state==user_answer]
+
+    if user_answer=="Exit":
+        
+        missing_states=[]
+        for state in all_states:
+            if state not in guessed_states:
+                missing_states.append(state)
+        learnings=pd.DataFrame(missing_states)        
+        learnings.to_csv("Day25/US states game/States_to_learn.csv")
+        
+        break
+    if user_answer in all_states:
+        guessed_states.append(user_answer)
+        jim=turtle.Turtle()
+        jim.hideturtle()
+        jim.penup()
+        jim.goto(state_cor.x.item(),state_cor.y.item())
+        jim.write(state_cor.state.item())
 
 
 screen.mainloop()
