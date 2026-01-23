@@ -20,11 +20,7 @@ while len(guessed_states)<50:
     state_cor=data[data.state==user_answer]
 
     if user_answer=="Exit":
-        
-        missing_states=[]
-        for state in all_states:
-            if state not in guessed_states:
-                missing_states.append(state)
+        missing_states=[state for state in all_states if state not in guessed_states]
         learnings=pd.DataFrame(missing_states)        
         learnings.to_csv("Day25/US states game/States_to_learn.csv")
         
