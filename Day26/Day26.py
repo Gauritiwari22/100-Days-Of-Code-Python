@@ -47,7 +47,7 @@ print(passed_students)
 # Iterating over Pandas DataFrame
 
 student_dict={
-    "name":["Alex","Bob","Charlie"],
+    "student":["Alex","Bob","Charlie"],
     "marks":[56,89,67]
 }
 
@@ -65,7 +65,7 @@ print(df)
 
 for (index,row) in df.iterrows():
     print(row)
-    print(row.name)
+    print(row.student)
     print(row.marks)
 
 
