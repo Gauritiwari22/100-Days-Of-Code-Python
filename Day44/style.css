@@ -1,0 +1,20 @@
+body {
+  background-color: #dbeeee;
+}
+
+#title {
+  color: #66BFBF;
+}
+
+.intro {
+  font-size: 18px;
+  color: #40514E;
+}
+
+a {
+  color: #11999E;
+}
+
+a:hover {
+  color: red;
+}
