@@ -1,8 +1,7 @@
 
 # 100 Days of Code – Python
 
-This repository documents my Python learning journey as part of the 100 Days of Code challenge.
-
+This repository documents my Python learning journey as part of 100 Days of Code: Python Bootcamp by Angela Yu.
 I am learning Python from scratch and using this repository to practice daily, understand core concepts, and build simple programs and beginner-level projects. 
 The focus is on consistency, clarity, and improving problem-solving skills step by step.
 
