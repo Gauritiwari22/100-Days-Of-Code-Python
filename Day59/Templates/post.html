@@ -1,0 +1,12 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+<h1>{{ post.title }}</h1>
+<h4 class="text-muted">{{ post.subtitle }}</h4>
+
+<p class="mt-4">{{ post.body }}</p>
+
+<a href="/" class="btn btn-secondary mt-3">Back</a>
+
+{% endblock %}
