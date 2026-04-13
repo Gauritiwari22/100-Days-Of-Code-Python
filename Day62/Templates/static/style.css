@@ -1,0 +1,15 @@
+body {
+    background-color: #f8f9fa;
+}
+
+h1 {
+    font-weight: bold;
+}
+
+.navbar {
+    padding: 10px;
+}
+
+button {
+    border-radius: 8px;
+}
